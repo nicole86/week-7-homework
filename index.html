@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Train schedule</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+	<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+</head>
+
+<body>
+	<header>
+		<h1>All Aboard!!!</h1>
+	</header>
+
+	<div class="container">
+		<h3>Current Schedule</h3>
+
+		<div>
+			<ul id="schedule">
+			</ul>
+		</div>
+	</div>
+
+<div class="container">
+	<h3>Current Schedule</h3>
+
+	<div>
+		<form id="add-train-form">
+			<label>Name</label>
+			<input type="text" placeholder="Name of line" id="trainName" />
+		
+			<label>Destination</label>
+			<input type="text" placeholder="Destination City" id="trainDestination" />
+		
+			<label>First Train Time</label>
+			<input type="text" placeholder="HH:mm" id="firstTrain" />
+		
+			<label>Frequency</label>
+			<input type="text" placeholder="minutes" id="trainFrequency" />
+		
+			<input type="button" id="addTrainBtn" value="Add Train" />
+		</form>
+	</div>
+</div>
+
+	<script type="text/javascript" src="assets/javascript/app.js"></script>
+	
+</body>
+</html>
