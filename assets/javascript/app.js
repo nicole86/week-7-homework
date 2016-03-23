@@ -30,7 +30,7 @@ $("#addTrainBtn").on("click", function(){
 	// Alert when new train added
 	alert("New train schedule added");
 
-	// Clears all text boxes
+	// Clears all text boxes when done adding
 	$("#trainName").val("");
 	$("#trainDestination").val("");
 	$("#firstTrain").val("");
@@ -38,4 +38,22 @@ $("#addTrainBtn").on("click", function(){
 
 	// Prevents moving to new page
 	return false;
+});
+
+// Adds info to page
+trainSchedule.on("child_added", function(childSnapshot, prevChildKey){
+
+	console.log(childSnapshot.val());
+
+	// Stores everything into a variable
+	var trainName = childSnapshot.val().name;
+	var trainDestination = childSnapshot.val().destination;
+	var firstTrain = childSnapshot.val().first;
+	var trainFrequency = childSnapshot.val().frequency;
+
+	// Logs everything to console
+	console.log(trainName);
+	console.log(trainDestination);
+	console.log(firstTrain);
+	console.log(trainFrequency);
 });
